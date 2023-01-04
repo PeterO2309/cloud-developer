@@ -40,3 +40,10 @@ venv/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+
+# Environment variables
+.env
+.profile
+awb-eb-keypair
+awb-eb-keypair.pub

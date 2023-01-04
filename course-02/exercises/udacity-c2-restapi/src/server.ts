@@ -1,4 +1,8 @@
-import express from 'express';
+import express, { NextFunction, Request, Response } from 'express';
+// import { promises as fsPromises } from 'fs;
+
+require('dotenv').config();
+
 import { sequelize } from './sequelize';
 
 import { IndexRouter } from './controllers/v0/index.router';
@@ -17,7 +21,7 @@ import { V0MODELS } from './controllers/v0/model.index';
   app.use(bodyParser.json());
 
   //CORS Should be restricted
-  app.use(function(req, res, next) {
+  app.use(function(req:Request, res:Response, next:NextFunction) {
     res.header("Access-Control-Allow-Origin", "http://localhost:8100");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     next();

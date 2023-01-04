@@ -9,7 +9,14 @@ export const config = {
     "aws_profile": "default",
     "aws_media_bucket": "udagram-peter-dev"
   },
+  "prod": {
+    "username": "",
+    "password": "",
+    "database": "udagram_prod",
+    "host": "",
+    "dialect": "postgres"
+  },
   "jwt": {
-    "secret": " ",
+    "secret": "helloworld",
   }
 }
